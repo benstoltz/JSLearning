@@ -128,7 +128,7 @@ console.log(result); // returns false and works because found evaluates/determin
 var num1 = 132;
 var num2 = 42;
 
-// variabel = boolean_expression ? true_value : false_value
+// variable = boolean_expression ? true_value : false_value
 
 var max = (num1 > num2) ? num1 : num2;
 console.log(max);
