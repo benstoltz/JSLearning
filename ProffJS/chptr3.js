@@ -5,7 +5,7 @@ Multi line comment
 weee
  */
 
-
+console.log("______________________");
 // strict mode changes parsing/execution model for JS.
 
 function doSomething(a, b) {
@@ -24,7 +24,7 @@ frank = 100;
 var message = "hi",
     found = false,
     age = 29;
-
+console.log("______________________");
 //undefined type variable declared without being initialized
 
 var bob;
@@ -33,6 +33,8 @@ console.log(bob === undefined);
 
 console.log(typeof bob);
 console.log(typeof humpty);
+
+console.log("______________________");
 
 // Null type. Null value is an empty object pointer: reason why typeof returns "object"
 
@@ -53,6 +55,9 @@ if (car !== null) {
 console.log(null == undefined); // undefined derivative of null so superficially equal to null.
 console.log(null === undefined);
 
+console.log("______________________");
+
+// Booleans
 
 var message = 'Hello World!';
 
@@ -64,7 +69,7 @@ if (message) {
     console.log("Value is true");
 }
 
-
+console.log("______________________");
 // Use isNaN() to check whether something is NaN
 
 console.log(isNaN(NaN));
@@ -83,6 +88,29 @@ console.log(String(value1)); // calls the objects toString() method (with no arg
 console.log(10 + "");
 
 
+console.log("______________________");
+
+// Prefix increment/decrement will preform the increment or decrement prior to the statement being run. The postfix version will run FOLLOWING
+// the specific statement.
+
+
+var age = 29;
+var anotherAge = --age + 2;
+
+console.log(age);
+console.log(anotherAge);
+
+
+var num1 = 2;
+var num2 = 20;
+var num3 = --num1 + num2; // If changed to a postfix then would evaluate to 22.
+var num4 = num1 + num2;
+
+console.log(num3);
+console.log(num4);
+
+
+console.log("______________________");
 // Logical NOT (!)
 
 console.log(!false); //true
@@ -92,6 +120,7 @@ console.log(!NaN); //true
 console.log(!"");  //true
 console.log(!123456); //false
 
+console.log("______________________");
 // Using two ! simulates using the Boolean() function on a value.
 
 console.log(!!false); //false
@@ -133,7 +162,7 @@ var num2 = 42;
 var max = (num1 > num2) ? num1 : num2;
 console.log(max);
 
-
+console.log("______________________");
 
 // do-while loop, done when you want the body to execute at least once. Post-test.
 
@@ -145,14 +174,31 @@ do {
 } while (i < 10);
 
 
+console.log("______________________");
 
 
+// For-in loop is used to enumerate the properties of an object
 
 
+//for (var propName in window) {
+//    console.log(propName);
+//}
+
+console.log("______________________");
+
+// Functions can take as many arguments as you want to pass in. They are represented internally as an array.
 
 
+function doAdd() {
+    if (arguments.length == 1) {
+        console.log(arguments[0] + 10);
+    } else if (arguments.length == 2) {
+        console.log(arguments[0] + arguments[1]);
+    }
+}
 
-
+doAdd(10); // 20
+doAdd(30, 20);  // 50
 
 
 
